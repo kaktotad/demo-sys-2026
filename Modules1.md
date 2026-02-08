@@ -29,7 +29,46 @@
 <a id="преднастройка"></a>
 ## 0. Преднастройка
 
-*текст*
+<details>
+<summary><strong>Преднастройка выполняеться на ВСЕХ машинах</strong></summary>
+Для того что бы вы могли что либо скачивать, необходимо зайти в sources.list командой 
+
+```bash
+ nano /etc/apt/sources.list
+```
+
+и закомментировать находящуюся там строку (поставить знак #) перед каждой строчкой.
+
+Стало: ![image](https://github.com/user-attachments/assets/9fc5e769-7d3e-45c9-b7fa-a9f76d72d374)
+
+Далее необходимой перейти в файл resolv.conf командой
+
+```bash
+nano /etc/resolv.conf
+```
+и прописать
+
+```bash
+nameserver 8.8.8.8
+```
+
+Стало: ![image](https://github.com/user-attachments/assets/b750accb-0c55-4c45-b9f4-c99a9dc7106b)
+
+Далее переходим в файл 
+```
+nano /etc/sysctl.conf
+```
+
+найти строку 
+- net.ipv4.ip_forward=0
+
+и включить данный параметр (удалить знак (#) и изменить 0 на цифру (1))
+```
+net.ipv4.ip_forward=1
+```
+
+Стало: ![image](https://github.com/user-attachments/assets/bfd8fb86-d2fd-4244-8e62-b3b4c70d6397)
+</details>
 
 [↑ Вернуться к навигации](#-навигация-по-методичке)
 
