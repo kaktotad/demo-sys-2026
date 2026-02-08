@@ -87,32 +87,32 @@ sysctl -p
   
 > <strong>ISP</strong>:
 ```bash
-hostnamectl set-hostname isp.au-team.irpo
+hostnamectl set-hostname isp.au-team.irpo; exec bash
 ```
 
 > <strong>HQ-RTR</strong>:
 ```bash
-hostnamectl set-hostname hq-rtr.au-team.irpo
+hostnamectl set-hostname hq-rtr.au-team.irpo; exec bash
 ```
 
 > <strong>BR-RTR</strong>:
 ```
-hostnamectl set-hostname br-rtr.au-team.irpo
+hostnamectl set-hostname br-rtr.au-team.irpo; exec bash
 ```
 
 > <strong>HQ-SRV</strong>:
 ```
-hostnamectl set-hostname hq-srv.au-team.irpo
+hostnamectl set-hostname hq-srv.au-team.irpo; exec bash
 ```
 
 > <strong>HQ-CLI</strong>:
 ```
-hostnamectl set-hostname hq-cli.au-team.irpo
+hostnamectl set-hostname hq-cli.au-team.irpo; exec bash
 ```
 
 > <strong>BR-SRV</strong>:
 ```
-hostnamectl set-hostname br-srv.au-team.irpo
+hostnamectl set-hostname br-srv.au-team.irpo; exec bash
 ```
 </details>
 
