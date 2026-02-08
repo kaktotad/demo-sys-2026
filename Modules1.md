@@ -84,12 +84,14 @@ sysctl -p
 
 <details>
 <summary><strong>Данное задание выполняеться на ВСЕХ машинах</strong></summary>
+  
 > <strong>ISP</strong>:
-```
+```bash
 hostnamectl set-hostname isp.au-team.irpo
 ```
+
 > <strong>HQ-RTR</strong>:
-```
+```bash
 hostnamectl set-hostname hq-rtr.au-team.irpo
 ```
 
@@ -97,7 +99,7 @@ hostnamectl set-hostname hq-rtr.au-team.irpo
 ```
 hostnamectl set-hostname br-rtr.au-team.irpo
 ```
->
+
 > <strong>HQ-SRV</strong>:
 ```
 hostnamectl set-hostname hq-srv.au-team.irpo
@@ -107,7 +109,7 @@ hostnamectl set-hostname hq-srv.au-team.irpo
 ```
 hostnamectl set-hostname hq-cli.au-team.irpo
 ```
->
+
 > <strong>BR-SRV</strong>:
 ```
 hostnamectl set-hostname br-srv.au-team.irpo
