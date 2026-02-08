@@ -188,6 +188,7 @@ hostnamectl set-hostname br-srv.au-team.irpo; exec bash
 *текст*
 
 [↑ Вернуться к навигации](#-навигация-по-методичке)
+
 ---
 
 <a id="dhcp"></a>
