@@ -122,8 +122,136 @@ hostnamectl set-hostname br-srv.au-team.irpo; exec bash
 
 <a id="адресация"></a>
 ## 2. Настройка IP адресов
+<br>
+<details>
+<summary><strong>Конфигурационные файлы адресации для всех устройств</strong></summary>
 
-*текст*
+🌐 ISP
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet dhcp
+
+auto ens224
+iface ens224 inet static
+address 172.16.4.1
+netmask 255.255.255.240
+
+auto ens256
+iface ens256 inet static
+address 172.16.5.1
+netmask 255.255.255.240
+```
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+
+📡 HQ-RTR
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet static
+address 172.16.4.2
+netmask 255.255.255.240
+gateway 172.16.4.1
+
+auto ens224
+iface ens224 inet static
+address 192.168.100.1
+netmask 255.255.255.192
+```
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+
+📡 BR-RTR
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet static
+address 172.16.5.2
+netmask 255.255.255.240
+gateway 172.16.5.1
+
+auto ens224
+iface ens224 inet static
+address 192.168.0.1
+netmask 255.255.255.224
+```
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+🖥️ HQ-SRV
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet static
+address 192.168.100.62
+netmask 255.255.255.192
+gateway 192.168.100.1
+```
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+
+🖥️ HQ-CLI
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet static
+address 192.168.200.2
+netmask 255.255.255.240
+gateway 192.168.200.1
+dns-nameservers 192.168.100.2
+```
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+
+🖥️ BR-SRV
+```
+nano /etc/network/interfaces
+```
+```
+auto ens192
+iface ens192 inet static
+address 192.168.0.2
+netmask 255.255.255.224
+gateway 192.168.0.1
+```
+
+```
+systemctl restart networking
+```
+```
+ip -c a 
+```
+</details></br>
 
 [↑ Вернуться к навигации](#-навигация-по-методичке)
 
