@@ -70,6 +70,11 @@ net.ipv4.ip_forward=1
 Стало: ![image](https://github.com/user-attachments/assets/bfd8fb86-d2fd-4244-8e62-b3b4c70d6397)
 </details>
 
+после чего необходимо применить данные изменения прописав команду 
+```bash
+sysctl -p
+```
+
 [↑ Вернуться к навигации](#-навигация-по-методичке)
 
 ---
@@ -77,7 +82,37 @@ net.ipv4.ip_forward=1
 <a id="именаустройств"></a>
 ## 1. Настройка имён устройств
 
-*текст*
+<details>
+<summary><strong>Данное задание выполняеться на ВСЕХ машинах</strong></summary>
+> <strong>ISP</strong>:
+```
+hostnamectl set-hostname isp.au-team.irpo
+```
+> <strong>HQ-RTR</strong>:
+```
+hostnamectl set-hostname hq-rtr.au-team.irpo
+```
+
+> <strong>BR-RTR</strong>:
+```
+hostnamectl set-hostname br-rtr.au-team.irpo
+```
+>
+> <strong>HQ-SRV</strong>:
+```
+hostnamectl set-hostname hq-srv.au-team.irpo
+```
+
+> <strong>HQ-CLI</strong>:
+```
+hostnamectl set-hostname hq-cli.au-team.irpo
+```
+>
+> <strong>BR-SRV</strong>:
+```
+hostnamectl set-hostname br-srv.au-team.irpo
+```
+</details>
 
 [↑ Вернуться к навигации](#-навигация-по-методичке)
 
