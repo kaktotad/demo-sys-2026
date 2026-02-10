@@ -144,6 +144,7 @@ iface ens256 inet static
 address 172.16.5.1
 netmask 255.255.255.240
 ```
+https://github.com/kaktotad/demo-sys-2026/blob/main/images/IP-isp.png?raw=true
 ```
 systemctl restart networking
 ```
